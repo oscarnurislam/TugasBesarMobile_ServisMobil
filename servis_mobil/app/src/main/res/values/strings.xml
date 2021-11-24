@@ -1,12 +1,18 @@
 <resources>
-    <string name="app_name">servis_mobil</string>
-    <string name="title_activity_login">Login</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="app_name">Nissan Apps</string>
+    <string-array name="arrMerek">
+        <item>Nissan</item>
+        <item>Datsun</item>
+        <item>Renault</item>
+    </string-array>
+    <string-array name="arrStatus">
+        <item>New</item>
+        <item>Proses Repair</item>
+        <item>Estimasi</item>
+        <item>Tunggu Part</item>
+        <item>Test Drive</item>
+        <item>Cuci</item>
+        <item>Final Inspection</item>
+        <item>Selesai</item>
+    </string-array>
 </resources>

@@ -10,12 +10,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Menu Utama\nProgres Kontrol Servis Kendaraan"
         android:layout_alignParentTop="true"
-        android:textSize="20sp"
-        android:textColor="#3F51B5"
         android:layout_marginTop="30dp"
-        android:textAlignment="center" />
+        android:text="Menu Utama\nProgres Kontrol Servis Kendaraan"
+        android:textAlignment="center"
+        android:textColor="#3F51B5"
+        android:textSize="20sp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/btn_klik"
+                android:background="@drawable/btn_klik2"
                 android:text="Input"
                 android:textColor="#fff" />
 
@@ -62,7 +62,7 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/btn_klik4"
+                android:background="@drawable/btn_klik2"
                 android:text="Update"
                 android:textColor="#fff" />
 
@@ -82,6 +82,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:textSize="11sp"
-        android:text="Aplikasi Servis Mobil " />
+        android:text="Aplikasi Progres Kontrol Servis Kendaraan"
+        android:textSize="11sp" />
 </RelativeLayout>
