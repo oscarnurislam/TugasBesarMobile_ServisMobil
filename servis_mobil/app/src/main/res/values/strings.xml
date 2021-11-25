@@ -1,18 +1,19 @@
 <resources>
     <string name="app_name">Nissan Apps</string>
     <string-array name="arrMerek">
-        <item>Nissan</item>
-        <item>Datsun</item>
-        <item>Renault</item>
+        <item>Inova</item>
+        <item>Kijang</item>
+        <item>Xenia</item>
+        <item>Alphard</item>
+        <item>Avanza</item>
     </string-array>
     <string-array name="arrStatus">
-        <item>New</item>
-        <item>Proses Repair</item>
-        <item>Estimasi</item>
+        <item>Tunggu</item>
         <item>Tunggu Part</item>
+        <item>Proses Perbaikan</item>
         <item>Test Drive</item>
         <item>Cuci</item>
-        <item>Final Inspection</item>
+        <item>Pengecekan akhir</item>
         <item>Selesai</item>
     </string-array>
 </resources>
