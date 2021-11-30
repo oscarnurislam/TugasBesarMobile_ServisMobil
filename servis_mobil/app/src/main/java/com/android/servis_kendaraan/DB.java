@@ -142,6 +142,29 @@ public class DB extends SQLiteOpenHelper {
         db.close();
     }
 
+    public void listKendaraan(){
+        SQLiteDatabase db = getWritableDatabase();
+        if (ListKendaraan.arrKendaraan.size() > 0){
+            ListKendaraan.arrKendaraan.clear();
+        }
+        @SuppressLint("Recycle")
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME_KENDARAAN, null);
+        if (cursor.moveToFirst()){
+            do {
+                modelKendaraan modKend = new modelKendaraan();
+                modKend.setTglInput(cursor.getString(0));
+                modKend.setMerek(cursor.getString(1));
+                modKend.setNopol(cursor.getString(2));
+                modKend.setStatus(cursor.getString(3));
+                modKend.setTglJanji(cursor.getString(4));
+                modKend.setJnsKerja(cursor.getString(5));
+
+                ListKendaraan.arrKendaraan.add(modKend);
+            } while (cursor.moveToNext());
+        }
+        db.close();
+    }
+
 
 }
 

@@ -13,14 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.android.servis_kendaraan.MenuUtama"
+            android:name=".UpdateKendaraan"
+            android:exported="false" />
+        <!-- <activity -->
+        <!-- android:name=".ListKendaraan" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".MenuUtama"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.servis_kendaraan.SplashScreen"
+            android:name=".SplashScreen"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -31,13 +37,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.servis_kendaraan.Login"
+            android:name=".Login"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name="com.android.servis_kendaraan.Register"
+            android:name=".Register"
             android:screenOrientation="portrait" />
-        <activity android:name="com.android.servis_kendaraan.InputKendaraan" />
+        <activity android:name=".InputKendaraan" />
+        <activity android:name=".ListKendaraan" />
     </application>
 
 </manifest>
