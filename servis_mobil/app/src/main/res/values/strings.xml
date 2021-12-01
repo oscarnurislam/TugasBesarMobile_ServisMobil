@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nissan Apps</string>
+    <string name="app_name">Servis Mobil</string>
     <string-array name="arrMerek">
         <item>Inova</item>
         <item>Kijang</item>

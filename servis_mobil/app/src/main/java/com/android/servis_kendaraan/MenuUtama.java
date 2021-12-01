@@ -35,6 +35,24 @@ public class MenuUtama extends AppCompatActivity {
             }
         });
 
+        btnUpdate = findViewById(R.id.btnUpdate);
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SoundBtn.soundBtn(MenuUtama.this);
+                startActivity(new Intent(MenuUtama.this, UpdateKendaraan.class));
+            }
+        });
+
+        btnStatus = findViewById(R.id.btnStatus);
+        btnStatus.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                SoundBtn.soundBtn(MenuUtama.this);
+                startActivity(new Intent(MenuUtama.this, ListKendaraan.class));
+            }
+        });
+
         btnLogout = findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
