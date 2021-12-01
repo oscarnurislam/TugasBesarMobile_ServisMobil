@@ -164,7 +164,39 @@ public class DB extends SQLiteOpenHelper {
         }
         db.close();
     }
-
-
+    public void listNopol(){
+        SQLiteDatabase db = getWritableDatabase();
+        @SuppressLint("Recycle")
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME_KENDARAAN, null);
+        if (cursor.moveToFirst()){
+            do {
+                UpdateKendaraan.arrNopol.add(cursor.getString(2));
+            } while (cursor.moveToNext());
+        }
+            db.close();
+    }
+    public void listKendaraanByNopol(String nopol) {
+        SQLiteDatabase db = getReadableDatabase();
+        @SuppressLint("Recycle")
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME_KENDARAAN + " WHERE "+ NOPOL + "='"+ nopol + "'", null);
+        if (cursor.moveToFirst()) {
+            do {
+                UpdateKendaraan.merek = cursor.getString(1);
+                UpdateKendaraan.status = cursor.getString(3);
+            } while (cursor.moveToNext());
+        }
+        db.close();
+    }
+    public void updateKendaraan(String nopol, String status) {
+        try {
+            SQLiteDatabase db = getWritableDatabase();
+            String sql = "UPDATE " + TABLE_NAME_KENDARAAN + " SET "+ STATUS +"='"+ status +"' WHERE "+ NOPOL +"='" + nopol + "';";
+            db.execSQL(sql);
+            UpdateKendaraan.suksesUpdate = true;
+        } catch (Exception exp) {
+            exp.printStackTrace();
+            UpdateKendaraan.suksesUpdate = false;
+        }
+    }
 }
 

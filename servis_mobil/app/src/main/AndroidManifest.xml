@@ -12,10 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<!--        <activity-->
+<!--            android:name=".UpdateKendaraan"-->
+<!--            android:exported="false" />-->
         <activity
-            android:name=".UpdateKendaraan"
-            android:exported="false" />
-        <!-- <activity -->
+            android:name=".ListKendaraan"
+            android:exported="false" /> <!-- <activity -->
         <!-- android:name=".ListKendaraan" -->
         <!-- android:exported="false" /> -->
         <activity
@@ -43,8 +45,8 @@
         <activity
             android:name=".Register"
             android:screenOrientation="portrait" />
+        <activity android:name=".UpdateKendaraan"/>
         <activity android:name=".InputKendaraan" />
-        <activity android:name=".ListKendaraan" />
     </application>
 
 </manifest>
