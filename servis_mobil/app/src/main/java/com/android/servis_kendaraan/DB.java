@@ -1,5 +1,8 @@
 package com.android.servis_kendaraan;
 
+/*
+ * Created by faozi on 14/03/18.
+ */
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,13 +17,13 @@ public class DB extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     // ================================================ USER ======================================
-    private static final String TABLE_NAME_USER = "mobil_user";
+    private static final String TABLE_NAME_USER = "nisanUser";
     private static final String NIK = "NIK";
     private static final String NAME = "NAME";
     private static final String PASSWORD = "PASSWORD";
 
     // ================================================ KENDARAAN ======================================
-    private static final String TABLE_NAME_KENDARAAN = "mobil_Vehicle";
+    private static final String TABLE_NAME_KENDARAAN = "nisanVehicle";
     private static final String TGL_INPUT = "TGL_INPUT";
     private static final String MEREK = "MEREK";
     private static final String NOPOL = "NOPOL";
@@ -126,7 +129,17 @@ public class DB extends SQLiteOpenHelper {
         }
     }
 
-
+    public void updateKendaraan(String nopol, String status) {
+        try {
+            SQLiteDatabase db = getWritableDatabase();
+            String sql = "UPDATE " + TABLE_NAME_KENDARAAN + " SET "+ STATUS +"='"+ status +"' WHERE "+ NOPOL +"='" + nopol + "';";
+            db.execSQL(sql);
+            UpdateKendaraan.suksesUpdate = true;
+        } catch (Exception exp) {
+            exp.printStackTrace();
+            UpdateKendaraan.suksesUpdate = false;
+        }
+    }
 
     @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
     public void cekKendaraan() {
@@ -142,14 +155,29 @@ public class DB extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void listKendaraan(){
+    @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
+    public void listKendaraanByNopol(String nopol) {
+        SQLiteDatabase db = getReadableDatabase();
+        @SuppressLint("Recycle")
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME_KENDARAAN + " WHERE "+ NOPOL + "='"+ nopol + "'", null);
+        if (cursor.moveToFirst()) {
+            do {
+                UpdateKendaraan.merek = cursor.getString(1);
+                UpdateKendaraan.status = cursor.getString(3);
+            } while (cursor.moveToNext());
+        }
+        db.close();
+    }
+
+    @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
+    public void listKendaraan() {
         SQLiteDatabase db = getWritableDatabase();
-        if (ListKendaraan.arrKendaraan.size() > 0){
+        if (ListKendaraan.arrKendaraan.size() > 0) {
             ListKendaraan.arrKendaraan.clear();
         }
         @SuppressLint("Recycle")
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME_KENDARAAN, null);
-        if (cursor.moveToFirst()){
+        if (cursor.moveToFirst()) {
             do {
                 modelKendaraan modKend = new modelKendaraan();
                 modKend.setTglInput(cursor.getString(0));
@@ -164,39 +192,18 @@ public class DB extends SQLiteOpenHelper {
         }
         db.close();
     }
-    public void listNopol(){
+
+    public void listNopol() {
         SQLiteDatabase db = getWritableDatabase();
         @SuppressLint("Recycle")
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME_KENDARAAN, null);
-        if (cursor.moveToFirst()){
+        if (cursor.moveToFirst()) {
             do {
                 UpdateKendaraan.arrNopol.add(cursor.getString(2));
             } while (cursor.moveToNext());
         }
-            db.close();
-    }
-    public void listKendaraanByNopol(String nopol) {
-        SQLiteDatabase db = getReadableDatabase();
-        @SuppressLint("Recycle")
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME_KENDARAAN + " WHERE "+ NOPOL + "='"+ nopol + "'", null);
-        if (cursor.moveToFirst()) {
-            do {
-                UpdateKendaraan.merek = cursor.getString(1);
-                UpdateKendaraan.status = cursor.getString(3);
-            } while (cursor.moveToNext());
-        }
         db.close();
     }
-    public void updateKendaraan(String nopol, String status) {
-        try {
-            SQLiteDatabase db = getWritableDatabase();
-            String sql = "UPDATE " + TABLE_NAME_KENDARAAN + " SET "+ STATUS +"='"+ status +"' WHERE "+ NOPOL +"='" + nopol + "';";
-            db.execSQL(sql);
-            UpdateKendaraan.suksesUpdate = true;
-        } catch (Exception exp) {
-            exp.printStackTrace();
-            UpdateKendaraan.suksesUpdate = false;
-        }
-    }
+
 }
 

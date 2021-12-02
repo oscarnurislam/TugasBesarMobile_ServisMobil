@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="30dp"
-        android:text="Menu Utama\nProgres Kontrol Servis Kendaraan"
+        android:text="Menu Utama\nServis Mobil"
         android:textAlignment="center"
         android:textColor="#3F51B5"
         android:textSize="20sp" />
@@ -37,7 +37,7 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/btn_klik2"
+                android:background="@drawable/btn_klik"
                 android:text="Input"
                 android:textColor="#fff" />
 
@@ -62,7 +62,7 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/btn_klik2"
+                android:background="@drawable/btn_klik4"
                 android:text="Update"
                 android:textColor="#fff" />
 
@@ -82,6 +82,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:text="Aplikasi Progres Kontrol Servis Kendaraan"
-        android:textSize="11sp" />
+        android:text="Aplikasi Servis Mobil"
+        android:textSize="25sp" />
 </RelativeLayout>

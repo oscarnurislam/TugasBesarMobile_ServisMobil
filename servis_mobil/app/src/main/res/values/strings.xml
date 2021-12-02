@@ -1,19 +1,19 @@
 <resources>
-    <string name="app_name">Servis Mobil</string>
+    <string name="app_name">Nissan Apps</string>
     <string-array name="arrMerek">
-        <item>Inova</item>
         <item>Kijang</item>
-        <item>Xenia</item>
-        <item>Alphard</item>
-        <item>Avanza</item>
+        <item>Inova</item>
+        <item>Toyota</item>
+        <item>Sania</item>
     </string-array>
     <string-array name="arrStatus">
-        <item>Tunggu</item>
+        <item>New</item>
+        <item>Proses Repair</item>
+        <item>Estimasi</item>
         <item>Tunggu Part</item>
-        <item>Proses Perbaikan</item>
         <item>Test Drive</item>
         <item>Cuci</item>
-        <item>Pengecekan akhir</item>
+        <item>Final Inspection</item>
         <item>Selesai</item>
     </string-array>
 </resources>

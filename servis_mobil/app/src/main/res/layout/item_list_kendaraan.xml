@@ -42,11 +42,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="5dp">
+
             <TextView
                 android:id="@+id/teksJanji"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jnji 20/09/19"/>
+                android:text="Selesai 20/09/19" />
 
             <TextView
                 android:id="@+id/teksStatus"

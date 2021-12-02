@@ -70,5 +70,4 @@
         android:background="@color/colorPrimary"
         android:textColor="#fff"
         android:text="Ubah" />
-
 </RelativeLayout>

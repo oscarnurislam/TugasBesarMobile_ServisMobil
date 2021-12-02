@@ -12,23 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<!--        <activity-->
-<!--            android:name=".UpdateKendaraan"-->
-<!--            android:exported="false" />-->
         <activity
-            android:name=".ListKendaraan"
-            android:exported="false" /> <!-- <activity -->
-        <!-- android:name=".ListKendaraan" -->
-        <!-- android:exported="false" /> -->
-        <activity
-            android:name=".MenuUtama"
+            android:name="com.android.servis_kendaraan.MenuUtama"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".SplashScreen"
+            android:name="com.android.servis_kendaraan.SplashScreen"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -39,14 +31,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Login"
+            android:name="com.android.servis_kendaraan.Login"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".Register"
+            android:name="com.android.servis_kendaraan.Register"
             android:screenOrientation="portrait" />
-        <activity android:name=".UpdateKendaraan"/>
-        <activity android:name=".InputKendaraan" />
+        <activity android:name="com.android.servis_kendaraan.InputKendaraan" />
+        <activity android:name="com.android.servis_kendaraan.UpdateKendaraan" />
+        <activity android:name="com.android.servis_kendaraan.ListKendaraan"></activity>
     </application>
 
 </manifest>

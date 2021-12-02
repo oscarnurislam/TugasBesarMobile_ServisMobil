@@ -34,7 +34,6 @@ public class MenuUtama extends AppCompatActivity {
                 startActivity(new Intent(MenuUtama.this, InputKendaraan.class));
             }
         });
-
         btnUpdate = findViewById(R.id.btnUpdate);
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,16 +42,14 @@ public class MenuUtama extends AppCompatActivity {
                 startActivity(new Intent(MenuUtama.this, UpdateKendaraan.class));
             }
         });
-
         btnStatus = findViewById(R.id.btnStatus);
-        btnStatus.setOnClickListener(new View.OnClickListener(){
+        btnStatus.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 SoundBtn.soundBtn(MenuUtama.this);
                 startActivity(new Intent(MenuUtama.this, ListKendaraan.class));
             }
         });
-
         btnLogout = findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,5 +91,4 @@ public class MenuUtama extends AppCompatActivity {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
-
 }

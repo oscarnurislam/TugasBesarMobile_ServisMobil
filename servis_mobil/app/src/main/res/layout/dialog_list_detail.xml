@@ -35,13 +35,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textStyle="bold"
-        android:text="Merek" />
+        android:text="Merk" />
 
     <TextView
         android:id="@+id/teksMerk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Merek"
+        android:text="Merk"
         android:textSize="15sp" />
 
     <TextView
@@ -63,13 +63,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textStyle="bold"
-        android:text="Janji Selesai" />
+        android:text="Selesai" />
 
     <TextView
         android:id="@+id/teksJanji"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Janji Selesai"
+        android:text="Selesai"
         android:textSize="15sp" />
 
     <TextView

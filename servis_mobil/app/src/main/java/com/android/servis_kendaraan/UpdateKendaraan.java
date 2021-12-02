@@ -20,6 +20,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class UpdateKendaraan extends AppCompatActivity {
+
     EditText editNopol, editMerk;
     Spinner spinStatus;
     Button btnUbah;
