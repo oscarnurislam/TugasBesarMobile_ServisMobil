@@ -14,13 +14,13 @@ public class DB extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     // ================================================ USER ======================================
-    private static final String TABLE_NAME_USER = "nisanUser";
+    private static final String TABLE_NAME_USER = "servisUser";
     private static final String NIK = "NIK";
     private static final String NAME = "NAME";
     private static final String PASSWORD = "PASSWORD";
 
     // ================================================ KENDARAAN ======================================
-    private static final String TABLE_NAME_KENDARAAN = "nisanVehicle";
+    private static final String TABLE_NAME_KENDARAAN = "servisVehicle";
     private static final String TGL_INPUT = "TGL_INPUT";
     private static final String MEREK = "MEREK";
     private static final String NOPOL = "NOPOL";
