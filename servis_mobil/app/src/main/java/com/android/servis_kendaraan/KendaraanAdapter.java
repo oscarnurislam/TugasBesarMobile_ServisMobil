@@ -1,9 +1,5 @@
 package com.android.servis_kendaraan;
 
-/*
- * Created by faozi on 01/02/18.
- */
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.support.annotation.NonNull;

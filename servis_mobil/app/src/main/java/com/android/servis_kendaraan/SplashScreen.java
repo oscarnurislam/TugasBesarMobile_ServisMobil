@@ -19,10 +19,6 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
-        mpSound1 = MediaPlayer.create(SplashScreen.this, R.raw.splashscreen);
-        mpSound1.start();
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

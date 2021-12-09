@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nissan Apps</string>
+    <string name="app_name">Servis Mobil</string>
     <string-array name="arrMerek">
         <item>Kijang</item>
         <item>Inova</item>
@@ -9,7 +9,6 @@
     <string-array name="arrStatus">
         <item>New</item>
         <item>Proses Repair</item>
-        <item>Estimasi</item>
         <item>Tunggu Part</item>
         <item>Test Drive</item>
         <item>Cuci</item>
